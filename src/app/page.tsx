@@ -16,14 +16,14 @@ export default function Home() {
         <div className="flex flex-col gap-12 md:flex-row">
           {/* Image */}
           <div className="flex items-center justify-center md:order-last md:flex-grow md:justify-end">
-            <div className="relative md:h-[360px] md:w-[320px]">
+            <div className="relative h-[300px] w-[280px] md:h-[360px] md:w-[320px]">
               <Image
                 src={ProfileMain}
                 alt="Picture of Shobana"
-                className="absolute z-10 border-8 border-gray-0 md:left-0 md:top-0 md:h-[320px] md:w-[280px]"
+                className="absolute z-10 h-[280px] w-[240px] border-8 border-gray-0 max-md:left-5 md:left-0 md:top-0 md:h-[320px] md:w-[280px]"
                 style={{ objectFit: "cover" }}
               ></Image>
-              <div className="absolute border-8 border-transparent bg-gray-200 md:bottom-0 md:right-0 md:h-[320px] md:w-[280px]"></div>
+              <div className="absolute h-[280px] w-[280px] border-8 border-transparent bg-gray-200 max-md:top-5 md:bottom-0 md:right-0 md:h-[320px] md:w-[280px]"></div>
             </div>
           </div>
 
@@ -84,14 +84,14 @@ export default function Home() {
         <div className="flex w-full flex-col justify-between gap-12 md:flex-row">
           {/* Image */}
           <div className="flex justify-center md:order-first md:justify-end">
-            <div className="relative md:h-[520px] md:w-[440px]">
+            <div className="relative h-[340px] w-[280px] md:h-[520px] md:w-[440px]">
               <Image
                 src={ProfileCasual}
                 alt="Fullpose of Shobana"
-                className="absolute z-10 border-8 border-gray-50 md:right-0 md:top-0 md:h-[480px] md:w-[400px]"
+                className="absolute z-10 h-[320px] w-[240px] border-8 border-gray-50 max-md:left-5 md:right-0 md:top-0 md:h-[480px] md:w-[400px]"
                 style={{ objectFit: "cover" }}
               ></Image>
-              <div className="absolute border-8 border-transparent bg-gray-200 md:bottom-0 md:left-0 md:h-[480px] md:w-[400px]"></div>{" "}
+              <div className="absolute h-[320px] w-[280px] border-8 border-transparent bg-gray-200 max-md:top-5 md:bottom-0 md:left-0 md:h-[480px] md:w-[400px]"></div>
             </div>
           </div>
 
