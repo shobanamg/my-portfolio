@@ -7,10 +7,7 @@ const typographyVariants = cva('text-gray-600 text-normal', {
     variants: {
         variant: {
             h1: 'text-4xl font-semibold md:font-bold md:text-5xl md:tracking-[-0.02em] lg:text-6xl lg:leading-[72px] text-gray-900',
-            h2: 'text-lg md:text-4xl font-semibold tracking-[-0.02em] text-gray-900',
             h3: 'text-2xl md:text-3xl font-semibold tracking-[-0.02em] text-gray-900',
-            subtitle: 'text-lg md:text-xl',
-            body1: 'text-base md:text-lg',
             body2: 'text-base',
             body3: 'text-sm',
         },
@@ -25,16 +22,11 @@ interface TypographyProps
         React.HTMLAttributes<HTMLHeadingElement>,
         HTMLHeadingElement
     >,
-        VariantProps<typeof typographyVariants> {
-    component?: React.ElementType;
-}
+        VariantProps<typeof typographyVariants> {}
 
 let elementMapping = {
     h1: 'h1',
-    h2: 'h2',
     h3: 'h3',
-    subtitle: 'p',
-    body1: 'p',
     body2: 'p',
     body3: 'p',
 };
@@ -44,26 +36,19 @@ type ComponentElement = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'p' | 'span';
 const Typography = React.forwardRef<
     HTMLHeadingElement | HTMLParagraphElement,
     TypographyProps
->(
-    (
-        { component, className = '', variant, children, ...props }: TypographyProps,
-        ref
-    ) => {
-        const Comp = (
-            component ? component : variant ? elementMapping[variant] : 'p'
-        ) as ComponentElement;
+>(({ className = '', variant, children, ...props }: TypographyProps, ref) => {
+    const Comp = (variant ? elementMapping[variant] : 'p') as ComponentElement;
 
-        return (
-            <Comp
-                className={mergeClasses(typographyVariants({ variant }), className)}
-                ref={ref}
-                {...props}
-            >
-                {children}
-            </Comp>
-        );
-    }
-);
+    return (
+        <Comp
+            className={mergeClasses(typographyVariants({ variant }), className)}
+            ref={ref}
+            {...props}
+        >
+            {children}
+        </Comp>
+    );
+});
 
 Typography.displayName = 'Typography';
 

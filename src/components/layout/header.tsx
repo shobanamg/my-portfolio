@@ -20,7 +20,7 @@ import { useWindowSize } from '@/hooks/use-window-size';
 
 const Logo = () => (
     <p className="text-2xl font-bold leading-none text-gray-900 md:text-3xl">
-        {'<SS />'}
+        {'<SM />'}
     </p>
 );
 
