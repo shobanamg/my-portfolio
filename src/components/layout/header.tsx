@@ -38,12 +38,11 @@ const Header = () => {
     return (
         <header
             className={mergeClasses(
-                'sticky top-0 z-30 flex h-[72px] w-full items-center justify-center border-b border-transparent bg-gray-0 transition-all ease-in max-md:border-gray-100',
+                'sticky top-0 z-30 w-full border-b border-transparent bg-gray-0 transition-all ease-in max-md:border-gray-100',
                 scrolled ? 'bg-gray-0/50 backdrop-blur-xl md:border-gray-100' : ''
             )}
         >
-            <div className="mx-auto w-full max-w-7xl">
-                <div className="flex items-center justify-between px-4 md:px-8">
+            <div className="mx-auto w-full max-w-7xl flex items-center justify-between p-4 md:px-8">
                 <Link href="/" noCustomization>
                         <Logo />
                     </Link>
@@ -95,7 +94,6 @@ const Header = () => {
                             </div>
                         </DrawerContent>
                     </Drawer>
-                </div>
             </div>
         </header>
     );
