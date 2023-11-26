@@ -1,32 +1,43 @@
-import * as React from 'react';
-import NextLink, { LinkProps as NextLinkProps } from 'next/link';
+import * as React from "react";
+import NextLink, { LinkProps as NextLinkProps } from "next/link";
 
-import { mergeClasses } from '@/lib/utils';
+import { mergeClasses } from "@/lib/utils";
 
-type LinkProps = NextLinkProps & {
-    className?: string;
-    children?: React.ReactNode;
-    noCustomization?: boolean;
-};
+interface LinkProps extends NextLinkProps {
+  className?: string;
+  children?: React.ReactNode;
+  noCustomization?: boolean;
+  externalLink?: boolean;
+}
 
-const Link = ({
-                  noCustomization,
-                  children = null,
-                  className = '',
-                  ...props
-              }: LinkProps) => {
+const Link = React.forwardRef<HTMLAnchorElement, LinkProps>(
+  (
+    {
+      noCustomization,
+      children = null,
+      className = "",
+      externalLink = false,
+      ...props
+    }: LinkProps,
+    ref
+  ) => {
     return (
-        <NextLink
-            {...props}
-            className={mergeClasses(
-                noCustomization ??
-                'text-base font-medium text-gray-600 transition-all hover:text-gray-900 active:text-gray-600',
-                className
-            )}
-        >
-            {children}
-        </NextLink>
+      <NextLink
+        {...props}
+        target={externalLink ? "_blank" : "_self"}
+        ref={ref}
+        className={mergeClasses(
+          noCustomization ??
+            "text-base font-medium text-gray-600 transition-all hover:text-gray-900 active:text-gray-600",
+          className
+        )}
+      >
+        {children}
+      </NextLink>
     );
-};
+  }
+);
+
+Link.displayName = "Link";
 
 export default Link;
