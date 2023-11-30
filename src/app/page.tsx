@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { MapPinIcon, Github, Twitter, Figma, Mail } from "lucide-react";
 
-import { TECHNOLOGIES } from "@/lib/data";
+import { EXPERIENCES, TECHNOLOGIES } from "@/lib/data";
 import ProfileMain from "/public/images/profile-main-picture.jpg";
 import ProfileCasual from "/public/images/profile-casual-picture.jpg";
 import Typography from "@/components/general/typography";
@@ -9,6 +9,8 @@ import IconButton from "@/components/general/icon-button";
 import Tag from "@/components/data-display/tag";
 import Container from "@/components/layout/container";
 import TechDetails from "@/components/data-display/tech-details";
+import Card from "@/components/layout/card";
+import ExperienceDetails from "@/components/data-display/experience-details";
 
 export default function Home() {
   return (
@@ -147,6 +149,24 @@ export default function Home() {
             <TechDetails {...technology} key={index} />
           ))}
         </div>
+      </Container>
+      {/* Experience Section */}
+      <Container className="bg-gray-50">
+        <div className="flex flex-col gap-4 self-center">
+          <Tag label="Experience" className="self-center" />
+          <Typography variant="subtitle">
+            Here is a quick summary of my most recent experiences:
+          </Typography>
+        </div>
+
+        {EXPERIENCES?.map((experience, index) => (
+          <Card
+            key={index}
+            className="h mx-auto flex w-full max-w-4xl flex-col justify-between gap-4 p-8 md:flex-row md:gap-8"
+          >
+            <ExperienceDetails {...experience} />
+          </Card>
+        ))}
       </Container>
     </>
   );

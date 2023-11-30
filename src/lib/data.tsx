@@ -18,7 +18,11 @@ import LogoFirebase from "/public/images/logos/icon-firebase.svg";
 import LogoMaterialUI from "/public/images/logos/icon-material-ui.svg";
 import LogoDocker from "/public/images/logos/icon-docker.svg";
 import LogoGithub from "/public/images/logos/icon-github.svg";
-import { TechDetails } from "@/lib/types";
+import LogoCostbits from "/public/images/logos/logo-costbits.svg";
+import LogoCostbitsLight from "/public/images/logos/logo-costbits-light.svg";
+import LogoHYF from "/public/images/logos/logo-hack-your-future.svg";
+import LogoHYFLight from "/public/images/logos/logo-hack-your-future-light.svg";
+import { ExperienceDetails, TechDetails } from "@/lib/types";
 
 export const NAV_LINKS = [
   {
@@ -127,5 +131,35 @@ export const TECHNOLOGIES: TechDetails[] = [
     label: "Docker",
     logo: LogoDocker,
     url: "https://docker.com/",
+  },
+];
+
+export const EXPERIENCES: ExperienceDetails[] = [
+  {
+    logo: LogoCostbits,
+    darkModeLogo: LogoCostbitsLight,
+    logoAlt: "costbits logo",
+    position: "Frontend Developer",
+    startDate: new Date(2023, 6),
+    endDate: new Date(2023, 10),
+    summary: [
+      "Worked as a frontend web developer (React /  Typescript / Tailwindcss) at CosBits.",
+      "Worked on the frontend of the CostBits web app.",
+    ],
+  },
+  {
+    logo: LogoHYF,
+    darkModeLogo: LogoHYFLight,
+    logoAlt: "HYF logo",
+    position: "Full Stack Web Developer",
+    startDate: new Date(2022, 8),
+    endDate: new Date(2023, 4),
+    summary: [
+      "Completed 32 week intensive full-stack development boot camp",
+      "Developed and maintained the backend of the Meal Sharing Individual Project (frontend + backend).",
+      "Lead the team in the final project.",
+      "Worked on both frontend and backend of the final project.",
+      "Implemented more than 10 projects using JS, React, TypeScript, Tailwindcss, Nodejs, Express, MongoDB, MySQL, Prisma, Firebase, Docker, and more.",
+    ],
   },
 ];
