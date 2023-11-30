@@ -1,3 +1,4 @@
+import { Github, Twitter, Figma } from "lucide-react";
 import LogoJavascript from "/public/images/logos/icon-javascript.svg";
 import LogoTypescript from "/public/images/logos/icon-typescript.svg";
 import LogoReact from "/public/images/logos/icon-react.svg";
@@ -36,6 +37,21 @@ export const NAV_LINKS = [
   {
     label: "Contact",
     href: "#contact",
+  },
+];
+
+export const SOCIAL_LINKS = [
+  {
+    icon: Github,
+    url: "https://github.com/shobanamg",
+  },
+  {
+    icon: Twitter,
+    url: "https://twitter.com/ShobanaMathiarl",
+  },
+  {
+    icon: Figma,
+    url: "https://www.figma.com",
   },
 ];
 
