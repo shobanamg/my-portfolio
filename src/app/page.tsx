@@ -1,16 +1,16 @@
 import Image from "next/image";
 import { MapPinIcon } from "lucide-react";
 
-import { EXPERIENCES, TECHNOLOGIES } from "@/lib/data";
+import { EXPERIENCES, PROJECTS, TECHNOLOGIES } from "@/lib/data";
 import ProfileMain from "/public/images/profile-main-picture.jpg";
 import ProfileCasual from "/public/images/profile-casual-picture.jpg";
 import Typography from "@/components/general/typography";
 import Tag from "@/components/data-display/tag";
 import Container from "@/components/layout/container";
 import TechDetails from "@/components/data-display/tech-details";
-import Card from "@/components/layout/card";
 import ExperienceDetails from "@/components/data-display/experience-details";
 import SocialIcons from "@/components/data-display/social-icons";
+import ProjectDetails from "@/components/data-display/project-details";
 
 export default function Home() {
   return (
@@ -125,7 +125,7 @@ export default function Home() {
       </Container>
 
       {/* Skills Section */}
-      <Container>
+      <Container id="skills">
         <div className="flex flex-col gap-4 self-center">
           <Tag label="Skills" className="self-center" />
           <Typography variant="subtitle">
@@ -149,12 +149,25 @@ export default function Home() {
         </div>
 
         {EXPERIENCES?.map((experience, index) => (
-          <Card
+          <ExperienceDetails {...experience} key={index} />
+        ))}
+      </Container>
+
+      {/* Projects Section */}
+      <Container id="projects">
+        <div className="flex flex-col gap-4 self-center">
+          <Tag label="Projects" className="self-center" />
+          <Typography variant="subtitle">
+            Some of the noteworthy projects I have built:
+          </Typography>
+        </div>
+
+        {PROJECTS?.map((project, index) => (
+          <ProjectDetails
             key={index}
-            className="h mx-auto flex w-full max-w-4xl flex-col justify-between gap-4 p-8 md:flex-row md:gap-8"
-          >
-            <ExperienceDetails {...experience} />
-          </Card>
+            {...project}
+            layoutType={index % 2 === 0 ? "default" : "reverse"}
+          />
         ))}
       </Container>
     </>

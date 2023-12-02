@@ -23,7 +23,12 @@ import LogoCostbits from "/public/images/logos/logo-costbits.svg";
 import LogoCostbitsLight from "/public/images/logos/logo-costbits-light.svg";
 import LogoHYF from "/public/images/logos/logo-hack-your-future.svg";
 import LogoHYFLight from "/public/images/logos/logo-hack-your-future-light.svg";
-import { ExperienceDetails, TechDetails } from "@/lib/types";
+
+import ProjectCountries from "/public/images/project-countries.png";
+import ProjectCinemania from "/public/images/project-cinemania.png";
+import ProjectAirbnb from "/public/images/project-airbnb.png";
+
+import { ExperienceDetails, ProjectDetails, TechDetails } from "@/lib/types";
 
 export const NAV_LINKS = [
   {
@@ -31,8 +36,12 @@ export const NAV_LINKS = [
     href: "#about",
   },
   {
-    label: "Work",
-    href: "#work",
+    label: "Skills",
+    href: "#skills",
+  },
+  {
+    label: "Projects",
+    href: "#projects",
   },
   {
     label: "Contact",
@@ -176,6 +185,60 @@ export const EXPERIENCES: ExperienceDetails[] = [
       "Lead the team in the final project.",
       "Worked on both frontend and backend of the final project.",
       "Implemented more than 10 projects using JS, React, TypeScript, Tailwindcss, Nodejs, Express, MongoDB, MySQL, Prisma, Firebase, Docker, and more.",
+    ],
+  },
+];
+
+export const PROJECTS: ProjectDetails[] = [
+  {
+    name: "Countries App",
+    description:
+      "A Countries Application, where you can search for the countries and see more details about it.",
+    url: "https://shobanamg.github.io/countries-app/",
+    previewImage: ProjectCountries,
+    technologies: [
+      "React",
+      "Typescript",
+      "Tailwindcss",
+      "Rest Countries API",
+      "React Query",
+      "Vitejs",
+    ],
+  },
+  {
+    name: "Airbnb Clone",
+    description:
+      "An Airbnb inspired platform, simplifying the search and reservation of diverse accommodations for a personalized travel experience.",
+    url: "https://rent-property-example.vercel.app/",
+    previewImage: ProjectAirbnb,
+    technologies: [
+      "React",
+      "Typescript",
+      "MongoDB",
+      "Nextjs",
+      "Cloudinary",
+      "Prisma",
+      "Tailwindcss",
+      "Next-Auth",
+    ],
+  },
+  {
+    name: "Cinemania",
+    description:
+      "For my culminating project at HackYourFuture, I played a key role as team lead while collaborating with my team on both front-end and back-end development.",
+    url: "https://cinemania.fly.dev/movies",
+    previewImage: ProjectCinemania,
+    technologies: [
+      "React",
+      "Express.js",
+      "Material UI",
+      "Styled Components",
+      "Emotion",
+      "MySQL",
+      "Node.js",
+      "Knex.js",
+      "Firebase",
+      "Docker",
     ],
   },
 ];
