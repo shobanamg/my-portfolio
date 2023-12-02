@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { MapPinIcon } from "lucide-react";
+import { MapPin } from "lucide-react";
 
 import { EXPERIENCES, PROJECTS, TECHNOLOGIES } from "@/lib/data";
 import ProfileMain from "/public/images/profile-main-picture.jpg";
@@ -11,6 +11,7 @@ import TechDetails from "@/components/data-display/tech-details";
 import ExperienceDetails from "@/components/data-display/experience-details";
 import SocialIcons from "@/components/data-display/social-icons";
 import ProjectDetails from "@/components/data-display/project-details";
+import ContactSection from "@/components/sections/contact";
 
 export default function Home() {
   return (
@@ -48,7 +49,7 @@ export default function Home() {
             </div>
             <div className="flex flex-col gap-2">
               <div className="flex gap-2">
-                <MapPinIcon className="stroke-gray-600" />
+                <MapPin className="stroke-gray-600" />
                 <Typography>Copenhagen, Denmark</Typography>
               </div>
 
@@ -62,9 +63,7 @@ export default function Home() {
                 <Typography>Available for new projects</Typography>
               </div>
             </div>
-            <div className="flex gap-1">
-              <SocialIcons />
-            </div>
+            <SocialIcons />
           </div>
         </div>
       </Container>
@@ -170,6 +169,9 @@ export default function Home() {
           />
         ))}
       </Container>
+
+      {/* Contact Section */}
+      <ContactSection />
     </>
   );
 }
