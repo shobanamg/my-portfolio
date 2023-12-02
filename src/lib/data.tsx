@@ -194,7 +194,8 @@ export const PROJECTS: ProjectDetails[] = [
     name: "Countries App",
     description:
       "A Countries Application, where you can search for the countries and see more details about it.",
-    url: "https://shobanamg.github.io/countries-app/",
+    demoUrl: "https://shobanamg.github.io/countries-app/",
+    sourceCodeUrl: "https://github.com/shobanamg/countries-app",
     previewImage: ProjectCountries,
     technologies: [
       "React",
@@ -209,7 +210,8 @@ export const PROJECTS: ProjectDetails[] = [
     name: "Airbnb Clone",
     description:
       "An Airbnb inspired platform, simplifying the search and reservation of diverse accommodations for a personalized travel experience.",
-    url: "https://rent-property-example.vercel.app/",
+    demoUrl: "https://rent-property-example.vercel.app/",
+    sourceCodeUrl: "https://github.com/shobanamg/airbnb-clone",
     previewImage: ProjectAirbnb,
     technologies: [
       "React",
@@ -226,7 +228,8 @@ export const PROJECTS: ProjectDetails[] = [
     name: "Cinemania",
     description:
       "For my culminating project at HackYourFuture, I played a key role as team lead while collaborating with my team on both front-end and back-end development.",
-    url: "https://cinemania.fly.dev/movies",
+    demoUrl: "https://cinemania.fly.dev/movies",
+    sourceCodeUrl: "https://github.com/HackYourFuture-CPH/CINEMANIA",
     previewImage: ProjectCinemania,
     technologies: [
       "React",

@@ -16,7 +16,8 @@ const ProjectDetails = ({
   name,
   description,
   technologies,
-  url,
+  demoUrl,
+  sourceCodeUrl,
   previewImage,
   layoutType = "default",
 }: ProjectDetailsProps) => {
@@ -31,7 +32,7 @@ const ProjectDetails = ({
             : "md:order-last md:rounded-r-xl md:border-l"
         )}
       >
-        <Link noCustomization href={url} externalLink>
+        <Link noCustomization href={demoUrl} externalLink>
           <Image
             src={previewImage}
             alt={`${name} preview`}
@@ -58,7 +59,7 @@ const ProjectDetails = ({
           ))}
         </div>
         <Link
-          href={url}
+          href={sourceCodeUrl}
           noCustomization
           className="self-start rounded-lg p-1.5 hover:bg-gray-50 [&_svg]:stroke-gray-500"
           externalLink
