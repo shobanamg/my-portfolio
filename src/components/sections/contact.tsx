@@ -42,7 +42,7 @@ const ContactSection = () => {
   };
 
   return (
-    <Container id="contact">
+    <Container className="bg-gray-50" id="contact">
       <div className="flex flex-col gap-4 self-center">
         <Tag label="Get in touch" className="self-center" />
         <Typography variant="subtitle" className="max-w-xl text-center">
@@ -83,7 +83,9 @@ const ContactSection = () => {
           </div>
         </div>
         <div className="flex flex-col items-center gap-2">
-          <Typography>You may also find me on these platforms!</Typography>
+          <Typography className="text-center">
+            You may also find me on these platforms!
+          </Typography>
           <SocialIcons />
         </div>
       </div>

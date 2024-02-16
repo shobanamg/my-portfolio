@@ -70,7 +70,7 @@ export default function Home() {
 
       {/* About Me Section */}
       <Container className="bg-gray-50" id="about">
-        <div className="self-center">
+        <div className="flex justify-center">
           <Tag label="About me" />
         </div>
         <div className="flex w-full flex-col justify-between gap-12 md:flex-row">
