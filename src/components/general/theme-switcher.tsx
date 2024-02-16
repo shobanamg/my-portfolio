@@ -1,32 +1,32 @@
-'use client';
+"use client";
 
-import { useState, useEffect } from 'react';
-import { MoonStar, Sun } from 'lucide-react';
-import { useTheme } from 'next-themes';
+import { useState, useEffect } from "react";
+import { MoonStar, Sun } from "lucide-react";
+import { useTheme } from "next-themes";
 
-import IconButton from '@/components/general/icon-button';
+import IconButton from "@/components/general/icon-button";
 
 const ThemeSwitcher = () => {
-    const [mounted, setMounted] = useState(false);
-    const { theme, setTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+  const { theme, setTheme } = useTheme();
 
-    const toggleTheme = () => {
-        setTheme(theme === 'dark' ? 'light' : 'dark');
-    };
+  const toggleTheme = () => {
+    setTheme(theme === "dark" ? "light" : "dark");
+  };
 
-    useEffect(() => {
-        setMounted(true);
-    }, []);
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
-    if (!mounted) {
-        return null;
-    }
+  if (!mounted) {
+    return null;
+  }
 
-    return (
-        <IconButton onClick={toggleTheme}>
-            {theme === 'dark' ? <MoonStar /> : <Sun />}
-        </IconButton>
-    );
+  return (
+    <IconButton onClick={toggleTheme}>
+      {theme === "dark" ? <Sun /> : <MoonStar />}
+    </IconButton>
+  );
 };
 
 export default ThemeSwitcher;
