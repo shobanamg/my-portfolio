@@ -70,7 +70,7 @@ export default function Home() {
 
       {/* About Me Section */}
       <Container className="bg-gray-50" id="about">
-        <div className="flex justify-center">
+        <div className="self-center">
           <Tag label="About me" />
         </div>
         <div className="flex w-full flex-col justify-between gap-12 md:flex-row">
@@ -125,8 +125,10 @@ export default function Home() {
 
       {/* Skills Section */}
       <Container id="skills">
-        <div className="flex flex-col gap-4 self-center">
-          <Tag label="Skills" className="self-center" />
+        <div className="flex flex-col items-center gap-4">
+          <div className="self-center">
+            <Tag label="Skills" />
+          </div>
           <Typography variant="subtitle">
             The skills, tools and technologies I am really good at:
           </Typography>
@@ -140,8 +142,10 @@ export default function Home() {
       </Container>
       {/* Experience Section */}
       <Container className="bg-gray-50">
-        <div className="flex flex-col gap-4 self-center">
-          <Tag label="Experience" className="self-center" />
+        <div className="flex flex-col items-center gap-4">
+          <div className="self-center">
+            <Tag label="Experience" />
+          </div>{" "}
           <Typography variant="subtitle">
             Here is a quick summary of my most recent experiences:
           </Typography>
@@ -154,8 +158,10 @@ export default function Home() {
 
       {/* Projects Section */}
       <Container id="projects">
-        <div className="flex flex-col gap-4 self-center">
-          <Tag label="Projects" className="self-center" />
+        <div className="flex flex-col items-center gap-4">
+          <div className="self-center">
+            <Tag label="Projects" />
+          </div>
           <Typography variant="subtitle">
             Some of the noteworthy projects I have built:
           </Typography>
