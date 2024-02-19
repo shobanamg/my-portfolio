@@ -3,7 +3,6 @@ import { MapPin } from "lucide-react";
 
 import { EXPERIENCES, PROJECTS, TECHNOLOGIES } from "@/lib/data";
 import ProfileMain from "/public/images/profile-main-picture.jpg";
-import ProfileCasual from "/public/images/profile-casual-picture.jpg";
 import Typography from "@/components/general/typography";
 import Tag from "@/components/data-display/tag";
 import Container from "@/components/layout/container";
@@ -68,78 +67,6 @@ export default function Home() {
         </div>
       </Container>
 
-      {/* About Me Section */}
-      <Container className="bg-gray-50" id="about">
-        <div className="self-center">
-          <Tag label="About me" />
-        </div>
-        <div className="flex w-full flex-col justify-between gap-12 md:flex-row">
-          {/* Image */}
-          <div className="flex justify-center md:order-first md:justify-end">
-            <div className="relative h-[380px] w-[320px] md:h-[520px] md:w-[440px]">
-              <Image
-                src={ProfileCasual}
-                alt="Fullpose of Shobana"
-                className="absolute z-10 h-[360px] w-[280px] border-8 border-gray-50 max-md:left-5 md:right-0 md:top-0 md:h-[480px] md:w-[400px]"
-                style={{ objectFit: "cover" }}
-              ></Image>
-              <div className="absolute h-[360px] w-[320px] border-8 border-transparent bg-gray-200 max-md:top-5 md:bottom-0 md:left-0 md:h-[480px] md:w-[400px]"></div>
-            </div>
-          </div>
-
-          {/* Content */}
-          <div className="flex max-w-xl flex-col gap-6">
-            <Typography variant="h3">
-              Curious about me? Here you have it:
-            </Typography>
-            <Typography>
-              lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-              viverra ipsum non neque ultricies, eget ultricies nisl ultricies.
-              Sed euismod, nisl eget aliquam ultricies, nisl libero ultricies
-              nisl, eget ultricies nisl ultricies nisl. Vestibulum ante ipsum
-              primis in faucibus orci luctus et ultrices posuere cubilia curae;
-              Donec euismod, nisl eget aliquam ultricies, nisl libero ultricies
-              nisl, eget ultricies nisl ultricies nisl.
-            </Typography>
-            <Typography>
-              lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-              viverra ipsum non neque ultricies, eget ultricies nisl ultricies.
-              Sed euismod, nisl eget aliquam ultricies, nisl libero ultricies
-              nisl, eget ultricies nisl ultricies nisl. Vestibulum ante ipsum
-              primis in faucibus orci luctus et ultrices posuere cubilia curae;
-              Donec euismod, nisl eget aliquam ultricies, nisl libero ultricies
-              nisl, eget ultricies nisl ultricies nisl.
-            </Typography>
-            <Typography>
-              lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-              viverra ipsum non neque ultricies, eget ultricies nisl ultricies.
-              Sed euismod, nisl eget aliquam ultricies, nisl libero ultricies
-              nisl, eget ultricies nisl ultricies nisl. Vestibulum ante ipsum
-              primis in faucibus orci luctus et ultrices posuere cubilia curae;
-              Donec euismod, nisl eget aliquam ultricies, nisl libero ultricies
-              nisl, eget ultricies nisl ultricies nisl.
-            </Typography>
-          </div>
-        </div>
-      </Container>
-
-      {/* Skills Section */}
-      <Container id="skills">
-        <div className="flex flex-col items-center gap-4">
-          <div className="self-center">
-            <Tag label="Skills" />
-          </div>
-          <Typography variant="subtitle">
-            The skills, tools and technologies I am really good at:
-          </Typography>
-        </div>
-
-        <div className="grid grid-cols-3 gap-y-4 md:grid-cols-6 md:gap-y-8 lg:grid-cols-6 lg:gap-y-12">
-          {TECHNOLOGIES.map((technology, index) => (
-            <TechDetails {...technology} key={index} />
-          ))}
-        </div>
-      </Container>
       {/* Experience Section */}
       <Container className="bg-gray-50">
         <div className="flex flex-col items-center gap-4">
@@ -174,6 +101,24 @@ export default function Home() {
             layoutType={index % 2 === 0 ? "default" : "reverse"}
           />
         ))}
+      </Container>
+
+      {/* Skills Section */}
+      <Container id="skills" className="bg-gray-50">
+        <div className="flex flex-col items-center gap-4">
+          <div className="self-center">
+            <Tag label="Skills" />
+          </div>
+          <Typography variant="subtitle">
+            The skills, tools and technologies I am really good at:
+          </Typography>
+        </div>
+
+        <div className="grid grid-cols-3 gap-y-4 md:grid-cols-6 md:gap-y-8 lg:grid-cols-6 lg:gap-y-12">
+          {TECHNOLOGIES.map((technology, index) => (
+            <TechDetails {...technology} key={index} />
+          ))}
+        </div>
       </Container>
 
       {/* Contact Section */}
