@@ -6,7 +6,6 @@ import { Menu, X } from "lucide-react";
 import { mergeClasses } from "@/lib/utils";
 import useScroll from "@/hooks/use-scroll";
 import Link from "@/components/navigation/link";
-import Button from "@/components/general/button";
 import ThemeSwitcher from "@/components/general/theme-switcher";
 import IconButton from "@/components/general/icon-button";
 import {
@@ -17,6 +16,7 @@ import {
 } from "@/components/navigation/drawer";
 import { NAV_LINKS } from "@/lib/data";
 import { useWindowSize } from "@/hooks/use-window-size";
+import DownloadCV from "@/components/general/download-cv";
 
 const Logo = () => (
   <p className="text-2xl font-bold leading-none text-gray-900 md:text-3xl">
@@ -57,7 +57,7 @@ const Header = () => {
           <div className="h-6 w-0.5 bg-gray-100"></div>
           <div className="flex items-center gap-4">
             <ThemeSwitcher />
-            <Button>Download CV</Button>
+            <DownloadCV />
           </div>
         </div>
 
@@ -80,17 +80,7 @@ const Header = () => {
               <ul className="flex list-none flex-col gap-4">
                 {NAV_LINKS.map((link, index) => (
                   <li key={index}>
-                    <Link
-                      href={link.href}
-                      onClick={() => {
-                        const timeoutId = setTimeout(() => {
-                          setIsOpen(false);
-                          clearTimeout(timeoutId);
-                        }, 500);
-                      }}
-                    >
-                      {link.label}
-                    </Link>
+                    <Link href={link.href}>{link.label}</Link>
                   </li>
                 ))}
               </ul>
@@ -100,7 +90,7 @@ const Header = () => {
                 <p>Switch Theme</p>
                 <ThemeSwitcher />
               </div>
-              <Button>Download CV</Button>
+              <DownloadCV />
             </div>
           </DrawerContent>
         </Drawer>
