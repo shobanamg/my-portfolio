@@ -91,15 +91,15 @@ export const TECHNOLOGIES: TechDetails[] = [
     url: "https://nodejs.org/en",
   },
   {
+    label: "Firebase",
+    logo: LogoFirebase,
+    url: "https://firebase.google.com/",
+  },
+  {
     label: "Express.js",
     logo: LogoExpress,
     darkModeLogo: LogoExpressLight,
     url: "https://expressjs.com/",
-  },
-  {
-    label: "Firebase",
-    logo: LogoFirebase,
-    url: "https://firebase.google.com/",
   },
   {
     label: "MySQL",
