@@ -165,7 +165,7 @@ export const EXPERIENCES: ExperienceDetails[] = [
     darkModeLogo: LogoCostbitsLight,
     logoAlt: "costbits logo",
     position: "Frontend Developer",
-    startDate: new Date(2023, 6),
+    startDate: new Date(2023, 5),
     endDate: new Date(2023, 10),
     summary: [
       "Worked as a frontend web developer (React /  Typescript / Tailwindcss) at CosBits.",
