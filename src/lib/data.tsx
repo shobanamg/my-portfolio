@@ -27,6 +27,7 @@ import LogoHYFLight from "/public/images/logos/logo-hack-your-future-light.svg";
 import ProjectCountries from "/public/images/project-countries.png";
 import ProjectCinemania from "/public/images/project-cinemania.png";
 import ProjectAirbnb from "/public/images/project-airbnb.png";
+import ProjectMealSharing from "/public/images/project-mealsharing.png";
 
 import { ExperienceDetails, ProjectDetails, TechDetails } from "@/lib/types";
 
@@ -191,22 +192,6 @@ export const EXPERIENCES: ExperienceDetails[] = [
 
 export const PROJECTS: ProjectDetails[] = [
   {
-    name: "Countries App",
-    description:
-      "A Countries Application, where you can search for the countries and see more details about it.",
-    demoUrl: "https://shobanamg.github.io/countries-app/",
-    sourceCodeUrl: "https://github.com/shobanamg/countries-app",
-    previewImage: ProjectCountries,
-    technologies: [
-      "React",
-      "Typescript",
-      "Tailwindcss",
-      "Rest Countries API",
-      "React Query",
-      "Vitejs",
-    ],
-  },
-  {
     name: "Airbnb Clone",
     description:
       "An Airbnb inspired platform, simplifying the search and reservation of diverse accommodations for a personalized travel experience.",
@@ -214,6 +199,8 @@ export const PROJECTS: ProjectDetails[] = [
     sourceCodeUrl: "https://github.com/shobanamg/airbnb-clone",
     previewImage: ProjectAirbnb,
     technologies: [
+      "HTML",
+      "CSS",
       "React",
       "Typescript",
       "MongoDB",
@@ -225,6 +212,24 @@ export const PROJECTS: ProjectDetails[] = [
     ],
   },
   {
+    name: "Meal Sharing",
+    description:
+      "For my individual project at HackYourFuture, I developed a full-stack web application that allows users to share meals with others. The app allows users to create, read, update, and delete meals and reservations.",
+    demoUrl: "https://meal-sharing-liart.vercel.app/meals",
+    sourceCodeUrl: "https://github.com/shobanamg/meal-sharing",
+    previewImage: ProjectMealSharing,
+    technologies: [
+      "HTML",
+      "CSS",
+      "React",
+      "Javascript",
+      "Express.js",
+      "MySQL",
+      "Node.js",
+      "Knex.js",
+    ],
+  },
+  {
     name: "Cinemania",
     description:
       "For my culminating project at HackYourFuture, I played a key role as team lead while collaborating with my team on both front-end and back-end development.",
@@ -232,7 +237,10 @@ export const PROJECTS: ProjectDetails[] = [
     sourceCodeUrl: "https://github.com/HackYourFuture-CPH/CINEMANIA",
     previewImage: ProjectCinemania,
     technologies: [
+      "HTML",
+      "CSS",
       "React",
+      "Javascript",
       "Express.js",
       "Material UI",
       "Styled Components",
@@ -242,6 +250,24 @@ export const PROJECTS: ProjectDetails[] = [
       "Knex.js",
       "Firebase",
       "Docker",
+    ],
+  },
+  {
+    name: "Countries App",
+    description:
+      "A Countries Application, where you can search for the countries and see more details about it.",
+    demoUrl: "https://shobanamg.github.io/countries-app/",
+    sourceCodeUrl: "https://github.com/shobanamg/countries-app",
+    previewImage: ProjectCountries,
+    technologies: [
+      "HTML",
+      "CSS",
+      "React",
+      "Typescript",
+      "Tailwindcss",
+      "Rest Countries API",
+      "React Query",
+      "Vitejs",
     ],
   },
 ];
