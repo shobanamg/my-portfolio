@@ -215,7 +215,7 @@ export const PROJECTS: ProjectDetails[] = [
     name: "Meal Sharing",
     description:
       "For my individual project at HackYourFuture, I developed a full-stack web application that allows users to share meals with others. The app allows users to create, read, update, and delete meals and reservations.",
-    demoUrl: "https://meal-sharing-liart.vercel.app/meals",
+    demoUrl: "https://meal-sharing-liart.vercel.app",
     sourceCodeUrl: "https://github.com/shobanamg/meal-sharing",
     previewImage: ProjectMealSharing,
     technologies: [
